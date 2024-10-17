@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic Birthday Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0f7fa;
+            font-family: 'Poppins', sans-serif; 
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            padding: 40px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            width: 80vw;
+            height: 125vh;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(-100px);
+            animation: fadeIn 1.5s ease-in-out forwards, slideIn 1.5s ease-in-out forwards;
+        }
+
+        .photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            animation: fadeInPhoto 2s ease-in-out forwards;
+            border: 5px solid white; 
+        }
+
+        .container h1 {
+            font-family: 'Pacifico', cursive; 
+            font-size: 3.5em;
+            color: #fff;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+            animation: popUp 1s ease-in-out forwards;
+        }
+
+        .container p {
+            font-size: 1.8em;
+            color: #fff;
+            margin-top: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); 
+            animation: fadeText 2s ease-in-out forwards;
+        }
+
+        .cake {
+            width: 120px;
+            margin: 30px auto;
+            animation: fadeInCake 1.5s ease-in-out forwards;
+        }
+
+        .balloon {
+            position: absolute;
+            width: 60px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        
+        .star, .confetti {
+            position: absolute;
+            opacity: 0.8;
+        }
+
+        .star {
+            width: 20px;
+            height: 20px;
+            background-color: gold;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: twinkle 1s infinite;
+            box-shadow: 0 0 10px rgba(255, 223, 0, 0.8);
+        }
+
+        .confetti {
+            width: 10px;
+            height: 10px;
+            background-color: #ff5733;
+            animation: fall 5s infinite;
+            border-radius: 2px; 
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes popUp {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInPhoto {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInCake {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="indhira.jpg" alt="indhi" class="photo">
+    <h1>Happy Birthday!</h1>
+    <p>Halloo halloo maaff banget sederhana saja<br> selamat ulang tahun ya semoga suka lama dan sangat telat tapi its okey kan?<br>
+        semoga panjang umur sehat selalu sekolah yang lancar terus bisa jaddi kak yang baik<br> maaf gabisa kasih kado atau kue maaf yaaaww 
+    bahagia selalu janlup main bareng yawww</p>
+    <img src="cakenobg.png" alt="Birthday Cake" class="cake"> 
+    
+    
+    <img src="pinkybalon.png" alt="Balloon" class="balloon" style="top: 10%; left: 5%;">
+    <img src="birubalon.png" alt="Balloon" class="balloon" style="top: 20%; right: 10%;">
+    <img src="merahbalon.png" alt="Balloon" class="balloon" style="top: 30%; left: 20%; animation-delay: 0.5s;">
+    <img src="pinkybalon.png" alt="Balloon" class="balloon" style="top: 40%; right: 20%; animation-delay: 1s;">
+    <img src="merahbalon.png" alt="Balloon" class="balloon" style="top: 50%; left: 30%; animation-delay: 1.5s;">
+
+   
+    <div class="star" style="top: 10%; left: 10%; animation-delay: 0s;"></div>
+    <div class="star" style="top: 15%; left: 60%; animation-delay: 0.2s;"></div>
+    <div class="star" style="top: 25%; right: 10%; animation-delay: 0.4s;"></div>
+    <div class="star" style="top: 30%; left: 40%; animation-delay: 0.6s;"></div>
+    <div class="star" style="top: 40%; right: 20%; animation-delay: 0.8s;"></div>
+
+  
+    <div class="confetti" style="top: -10%; left: 20%; animation-delay: 0s;"></div>
+    <div class="confetti" style="top: -20%; right: 30%; animation-delay: 1s;"></div>
+    <div class="confetti" style="top: -15%; left: 50%; animation-delay: 0.5s;"></div>
+    <div class="confetti" style="top: -25%; right: 10%; animation-delay: 0.7s;"></div>
+    <div class="confetti" style="top: -5%; left: 70%; animation-delay: 1.5s;"></div>
+</div>
+
+<script>
+    
+    const stars = document.querySelectorAll('.star');
+    stars.forEach(star => {
+        star.style.left = Math.random() * 80 + 'vw';
+        star.style.top = Math.random() * 60 + 'vh';
+    });
+
+    const confettis = document.querySelectorAll('.confetti');
+    confettis.forEach(confetti => {
+        confetti.style.left = Math.random() * 80 + 'vw';
+        confetti.style.top = Math.random() * -50 + 'vh';
+        confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+    });
+</script>
+
+</body>
+</html>
